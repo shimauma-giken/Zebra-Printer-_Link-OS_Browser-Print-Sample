@@ -104,16 +104,7 @@ function getConfig(){
 		*/ 
 		function(config){alert(JSON.stringify(config))}, 
 		function(error){alert(JSON.stringify(new BrowserPrint.ApplicationConfiguration()));}
-        )
-
-        // テスト
-        if (window.File) {
-        // File APIに関する処理を記述
-        window.alert("File APIが実装されてます。");
-        } else {
-        window.alert("本ブラウザではFile APIが使えません");
-        }
-
+	)
 }
 function writeToSelectedPrinter(dataToWrite)
 {
@@ -197,7 +188,6 @@ window.onload = setup;
 <input type="button" value="BMPファイルの印刷" onclick="sendImage('Zebra_logobox.bmp');"><br/><br/>
 <input type="button" value="JPGファイルの印刷" onclick="sendImage('ZebraGray.jpg');"><br/><br/>
 <input type="button" value="ZPLファイルの印刷" onclick="sendFile('print_jp.zpl');"><br/><br/>
-<input type="button" value="PDFファイルの印刷" onclick="sendFile('print_jp.pdf');"><br/><br/>
 <a href="../browserprint_docs/index.html" target="_blank">Zebra Browser Print 関連ドキュメント（開発者向け）</a><br/><br/>
 <a href="https://www.zebra.com/ap/en/support-downloads/printer-software/by-request-software.html" target="_blank">Zebra Browser Print のダウンロード</a><br/><br/>
 </body>
